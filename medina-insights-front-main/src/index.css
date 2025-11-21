@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Medina Design System - Warm Architectural */
+    /* Background: #FDFCF8 (Cream/Stone) */
+    --background: 40 20% 98%; 
+    /* Foreground: #1A1A1A (Soft Black) */
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 10%;
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 40 10% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 40 10% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 40 10% 94%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border: #E6E4DC (Stone Grey) */
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 0 0% 10%;
+
+    --radius: 0rem; /* Sharp corners always */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-black selection:text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+    @apply border border-border;
+  }
+  .brutalist-button {
+    @apply px-6 py-4 bg-primary text-primary-foreground font-bold tracking-wide uppercase text-xs transition-all duration-300 hover:bg-[#333] active:scale-95;
+  }
+  .brutalist-card {
+    @apply bg-white border border-border p-6 shadow-sm;
+  }
+  .brutalist-input {
+    @apply w-full bg-white border border-border p-3 text-sm focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground;
+  }
+}

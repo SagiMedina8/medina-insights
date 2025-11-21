@@ -1,0 +1,5 @@
+medina-back/local.settings.json
+medina-back/__pycache__/
+node_modules/
+.env
+dist/
